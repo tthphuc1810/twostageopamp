@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# Thiết kế mạch Analog Two-Stage Opamp trên công nghệ 90nm
+# Thiết kế mạch Analog Two-Stage Opamp trên công nghệ CMOS 90nm
 
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/circuit.png)
 
