@@ -92,3 +92,7 @@
 * Check DRC
   
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/drccheck.png)
+
+
+For more info, check the project's report & ppt:
+https://github.com/tthphuc1810/twostageopamp/blob/master/report/Two_Stage_Opamp_TTP.pdf
