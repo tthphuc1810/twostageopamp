@@ -78,8 +78,10 @@
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/trans.jpg)
 
 * Sau khi mô phỏng dạng sóng ở mode AC và trans thấy được :
-- Ở mode AC tần số và độ lợi thi theo mức mong muốn gần đúng với spec
-- Ở mode Trans tín hiệu đã khuếch đại ra ở Vout
+  
+** Ở mode AC tần số và độ lợi thi theo mức mong muốn gần đúng với spec
+
+** Ở mode Trans tín hiệu đã khuếch đại ra ở Vout
 
 ### Bước 4 : Vẽ layout , check DRC LVS 
 
