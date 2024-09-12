@@ -1,98 +1,97 @@
 <p align="center">
-  <a href="https://hcmus.edu.vn//" title="Trường Đại học Khoa Học Tự Nhiên " style="border: none;">
-    <img src="https://fetel.hcmus.edu.vn/wp-content/uploads/2022/09/logo-fetel.png" alt="rường Đại học Khoa Học Tự Nhiên | University of Science">
+  <a href="https://hcmus.edu.vn//" title="University of Science" style="border: none;">
+    <img src="https://fetel.hcmus.edu.vn/wp-content/uploads/2022/09/logo-fetel.png" alt="University of Science">
   </a>
 </p>
 
-# Thiết kế mạch Analog Two-Stage Opamp trên công nghệ CMOS 90nm
+# Design of Two-Stage Opamp Circuit Using 90nm CMOS Technology
 
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/circuit.png)
 
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/gain.png)
 
-## Giới thiệu
+## Introduction
 
-* Đây là bài tập được sử dụng làm đồ án cuối kì cho môn Thiết kế vi mạch .
-* Bài tập được xây dựng trên phần mềm Synopsys Custom Compiler , sử dụng công nghệ 90nm.
-* Thiết kế mạch Two-Stage Opamp theo spec yêu cầu cụ thể .
-* Thiết kế full flow custom IC design (schematic - simulation - layout - check DRC,LVS)
-### Giảng viên hướng dẫn
+* This project is used as a final assignment for the VLSI Design course.
+* The project is developed using Synopsys Custom Compiler, utilizing 90nm technology.
+* The design of the Two-Stage Opamp follows specific requirements.
+* It involves a full-flow custom IC design (schematic - simulation - layout - DRC, LVS checking).
 
-* ThS. Nguyễn Thị Thiên Trang- Khoa Điện Tử - Viễn Thông , Trường Đại Học Khoa Học Tự Nhiên - ĐHQGHCM
+### Supervisor
 
-### Sinh viên thực hiện
+* MsC. Nguyen Thi Thien Trang - Faculty of Electronics and Telecommunications, University of Science - VNU-HCM
 
-|**STT**|**MSSV**|  **Họ và tên**  |       **Email**      |
-|-------|--------|-----------------|----------------------|
-|   1   |21207077|Tran Thien Phuc  |21207077@hcmus.edu.vn |
+### Students Involved
 
-## Chạy thử project
+|**No**|**Student ID**|  **Full Name**  |       **Email**      |
+|------|---------------|------------------|----------------------|
+|  1   |21207077       |Tran Thien Phuc   |21207077@hcmus.edu.vn |
 
-### Yêu cầu để thực thi project
+## Project Execution
+
+### Requirements to Execute the Project
 
 * Synopsys Custom Compiler
 
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/custom_compiler.png)
 
+* Design according to the provided specifications.
 
-* Thiết kế theo spec đã đưa ra  
+### Step 1: Follow the flow. Process specifications and calculate W/L
 
-### Bước 1: Thực hiện theo flow . Xử lí spec và tính W/L    
+* Analyze the current mirror circuit using the Diode-Connected function.
 
-* Phân tích mạch current mirror sử dụng chức năng của Diode-Connected
-  
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/current.png)
-  
-* Đưa NMOS và PMOS về vùng sat ( region 2 )
-  
+
+* Bring NMOS and PMOS into saturation (region 2).
+
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/diode.png)
 
-* Khảo sát operating point đưa ra được các thông số cần thiết để tính W/L của từng stage
-  
+* Survey the operating point to obtain the necessary parameters for calculating W/L of each stage.
+
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/OP.png)
 
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/op1.png)
 
+* After obtaining the parameters, begin calculations according to the specifications.
 
-* Sau khi có được các thông số bắt đầu tính toán theo yêu cầu của spec 
+### Step 2: Draw schematic and symbol
 
-### Bước 2: Vẽ schematic . sympol 
-
-* Sau khi có được các W/L cần thiết tiến hành vẽ schematic và sympol
+* After calculating the necessary W/L, proceed to draw the schematic and symbol.
 
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/schematic.jpg)
 
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/symbol.jpg)
 
-### Bước 3 : Tiến hành lập các testbench để mô phỏng AC , trans 
-* Testbench mô phỏng AC
+### Step 3: Set up test benches for AC and transient simulations
+
+* AC simulation test bench
 
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/testbench_ac.jpg)
 
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/ac.jpg)
 
-* Testbench mô phỏng trans
+* Transient simulation test bench
 
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/testbench_trans.jpg)
 
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/trans.jpg)
 
-* Sau khi mô phỏng dạng sóng ở mode AC và trans thấy được :
+* After simulating the waveforms in AC and transient modes, the results show:
   
-** Ở mode AC tần số và độ lợi thi theo mức mong muốn gần đúng với spec
+** In AC mode, the frequency and gain are close to the desired specifications.
 
-** Ở mode Trans tín hiệu đã khuếch đại ra ở Vout
+** In Transient mode, the signal is amplified at Vout.
 
-### Bước 4 : Vẽ layout , check DRC LVS 
+### Step 4: Draw layout, check DRC and LVS
 
-* Hình ảnh layout 
+* Layout image
 
 ![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/layout.jpg)
 
-* Check DRC
-  
-![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/drccheck.png)
+* DRC check
 
+![Alt text](https://raw.githubusercontent.com/tthphuc1810/twostageopamp/master/pic/drccheck.png)
 
 For more info, check the project's report & ppt:
 https://github.com/tthphuc1810/twostageopamp/blob/master/report/Two_Stage_Opamp_TTP.pdf
